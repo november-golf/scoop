@@ -21,8 +21,7 @@ function handleClick(e: React.MouseEvent<HTMLButtonElement>){
 }
 
 if(scoop){
-  console.log(scoop[0]["title"])
-  console.log(scoop[0]["description"])
+  console.log(scoop)
 }
 
   return (
