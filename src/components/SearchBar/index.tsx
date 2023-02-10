@@ -4,9 +4,10 @@ interface Props {
   value: string;
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleEnter: (event: React.KeyboardEvent) => void;
 }
 
-export default function SearchBar({value, handleClick, handleChange}:Props) {
+export default function SearchBar({value, handleClick, handleChange, handleEnter}:Props) {
   return (
     
       <div className="flex space-x-1">
@@ -15,6 +16,7 @@ export default function SearchBar({value, handleClick, handleChange}:Props) {
               className="flex justify-center w-full px-4 py-2 text-purple-700 bg-white border rounded-full focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
               placeholder="Search..."
               onChange={handleChange}
+              onKeyDown={handleEnter}
               value={value}
 
           />

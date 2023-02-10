@@ -6,9 +6,9 @@ export default function NewsDisplay({results}: any) {
   
 
   // if(results){console.log(typeof(articles), results[0]["title"])};
-  if (results) {
-    console.log(results)
-  }
+  // if (results) {
+  //   console.log(results)
+  // }
 
   return (
     <>

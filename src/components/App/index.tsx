@@ -20,9 +20,17 @@ function handleClick(e: React.MouseEvent<HTMLButtonElement>){
   setSubmitSearch(searchValue)
 }
 
-if(scoop){
-  console.log(scoop)
+const handleEnter = (e: React.KeyboardEvent) =>{
+  const target = e.target as HTMLInputElement;
+  const value = target.value;
+  if (e.code === "Enter"){
+    setSubmitSearch(value);
+  }
 }
+
+// if(scoop){
+//   console.log(scoop)
+// }
 
   return (
     <div className="flex items-center flex-col space-y-4 space-x-4 container mx-auto p-4">
@@ -30,7 +38,8 @@ if(scoop){
       <SearchBar 
         value={searchValue}
         handleChange={handleChange}
-        handleClick={handleClick} />
+        handleClick={handleClick} 
+        handleEnter={handleEnter} />
        {scoop ? (
           <NewsDisplay className="my-100" results={scoop}/>
         ) : (<p>Keep Searching, nothing found.</p>)
