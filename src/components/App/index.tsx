@@ -3,6 +3,7 @@ import NewsDisplay from '../NewsDisplay'
 import SearchBar from '../SearchBar'
 import { useState } from 'react'
 import { useNews } from '../../hooks/useNews'
+import logo from '../../../src/get.png'
 
 export default function App() {
 
@@ -34,7 +35,8 @@ const handleEnter = (e: React.KeyboardEvent) =>{
 
   return (
     <div className="flex items-center flex-col space-y-4 space-x-4 container mx-auto p-4">
-      <h1 className="text-slate-600 text-4xl font-bold my-10 text-center">NEWS</h1>
+      <img className="w-44 h-44" src={logo} alt='NEWS'/>
+      
       <SearchBar 
         value={searchValue}
         handleChange={handleChange}
