@@ -13,7 +13,7 @@ export default function SearchBar({value, handleClick, handleChange, handleEnter
       <div className="flex space-x-1">
           <input
               type="text"
-              className="flex justify-center w-full px-4 py-2 text-indigo-500 bg-white border rounded-full focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="flex justify-center w-full px-4 py-2 text-indigo-400 bg-white border rounded-full focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
               placeholder="Search..."
               onChange={handleChange}
               onKeyDown={handleEnter}
